@@ -14,12 +14,15 @@ int main()
 
     //Fraction f3 { add(f1, f2) };
     Fraction addf1f2 {f1 + f2};
-
+    Fraction subf1f2 {f1 - f2};
+    
     //std::cout << "add(f1, f2) = ";
     //f3.display();
 
-    std::cout << std::endl << "sub(f1, f2) = ";
-    (sub(f1, f2)).display();
+    // std::cout << std::endl << "sub(f1, f2) = ";
+    // (sub(f1, f2)).display();
+    std::cout << std::endl << "f1-f2 = ";
+    subf1f2.display();
 
     std::cout << std::endl << "mul(f1, f2) = ";
     (mul(f1, f2)).display();
