@@ -44,16 +44,27 @@ int main()
     if (f1==f2){
         std::cout << std::endl << f1 << " et "<< f2 << " sont egales.";
     }
-    else{
-        std::cout << std::endl << f1 << " et "<< f2 << " ne sont pas egales.";
+    
+    if (f1!=f2){
+        std::cout << std::endl << f1 << " et "<< f2 << " sont differentes.";
+    }
+    
+    if (f1<f2){
+        std::cout << std::endl << f1 << " est inferieur a "<< f2 ;
+    }
+    
+    if (f1<=f2){
+        std::cout << std::endl << f1 << " est inferieur ou egale a "<< f2 ;
     }
 
-    if (f1!=f2){
-        std::cout << std::endl << f1 << " et "<< f2 << " ne sont pas egales.";
+    if (f1>f2){
+        std::cout << std::endl << f1 << " est superieur a "<< f2 ;
     }
-    else{
-        std::cout << std::endl << f1 << " et "<< f2 << " sont egales.";
+
+    if (f1>=f2){
+        std::cout << std::endl << f1 << " est superieur ou egale a "<< f2 ;
     }
+
    
 
     return 0;
