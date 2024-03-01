@@ -17,3 +17,4 @@ Fraction operator*(Fraction const& f1, Fraction const& f2);
 // Fraction div(Fraction const& f1, Fraction const& f2);
 Fraction operator/(Fraction const& f1, Fraction const& f2);
 bool operator==(Fraction const& f1, Fraction const& f2);
+bool operator!=(Fraction const& f1, Fraction const& f2);

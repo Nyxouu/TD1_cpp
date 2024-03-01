@@ -47,6 +47,13 @@ int main()
     else{
         std::cout << std::endl << f1 << " et "<< f2 << " ne sont pas egales.";
     }
+
+    if (f1!=f2){
+        std::cout << std::endl << f1 << " et "<< f2 << " ne sont pas egales.";
+    }
+    else{
+        std::cout << std::endl << f1 << " et "<< f2 << " sont egales.";
+    }
    
 
     return 0;
