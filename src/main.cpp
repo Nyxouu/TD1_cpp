@@ -40,6 +40,13 @@ int main()
     //(add({1, 6}, {2, 6})).display();
     std::cout << std::endl << "f1+f2 = "<< f1 + f2 ;
     //addf1f2.display();
+
+    if (f1==f2){
+        std::cout << std::endl << f1 << " et "<< f2 << " sont egales.";
+    }
+    else{
+        std::cout << std::endl << f1 << " et "<< f2 << " ne sont pas egales.";
+    }
    
 
     return 0;

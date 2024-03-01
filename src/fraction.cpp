@@ -73,3 +73,15 @@ Fraction operator/(Fraction const& f1, Fraction const& f2) {
         f1.denominator * f2.numerator
     });
 }
+
+
+bool operator==(Fraction const& f1, Fraction const& f2) {
+    if(f1.numerator*f2.denominator == f1.denominator*f2.numerator){
+        return true;
+    }
+    else{
+        return false;
+    };
+}
+
+
