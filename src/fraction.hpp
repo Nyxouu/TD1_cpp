@@ -4,7 +4,10 @@
 struct Fraction {
     unsigned int numerator;
     unsigned int denominator;
+
+    float to_float();
 };
+
 
 std::ostream& operator<<(std::ostream& os, Fraction const& f);
 
@@ -33,5 +36,3 @@ Fraction operator+ (Fraction & f1, Fraction const& f2);
 Fraction operator- (Fraction & f1, Fraction const& f2);
 Fraction operator* (Fraction & f1, Fraction const& f2);
 Fraction operator/ (Fraction & f1, Fraction const& f2);
-
-float to_float (Fraction const& f);

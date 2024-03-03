@@ -187,16 +187,16 @@ Fraction operator/ (Fraction & f1, Fraction const& f2){
     return simplify(f1);
 }
 
-
-
-float to_float (Fraction const& f){
-    float numeratorteurToFloat {static_cast<float>(f.numerator)};
-    float denominatorToFloat {static_cast<float>(f.denominator)};
+float Fraction::to_float (){
+    float numeratorteurToFloat {static_cast<float>(numerator)};
+    float denominatorToFloat {static_cast<float>(denominator)};
     float fractionToFloat {static_cast<float>(numeratorteurToFloat/denominatorToFloat)};
     return (fractionToFloat);
 }
 
+// Fraction Fraction::operator float() const {
 
+// }
 
 
 

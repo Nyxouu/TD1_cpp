@@ -71,7 +71,7 @@ int main()
 
     std::cout << std::endl << "f1 = "<< f1;
 
-    std::cout << std::endl << f1 << " = " << to_float(f1);
+    std::cout << std::endl << f1 << " = " << f1.to_float();
 
 
     return 0;
