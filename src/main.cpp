@@ -13,10 +13,10 @@ int main()
     std::cout << std::endl;
 
     //Fraction f3 { add(f1, f2) };
-    Fraction addf1f2 {f1 + f2};
-    Fraction subf1f2 {f1 - f2};
-    Fraction mulf1f2 {f1 * f2};
-    Fraction divf1f2 {f1 / f2};
+    // Fraction addf1f2 {f1 + f2};
+    // Fraction subf1f2 {f1 - f2};
+    // Fraction mulf1f2 {f1 * f2};
+    // Fraction divf1f2 {f1 / f2};
     
     //std::cout << "add(f1, f2) = ";
     //f3.display();
@@ -24,21 +24,25 @@ int main()
     // std::cout << std::endl << "sub(f1, f2) = ";
     // (sub(f1, f2)).display();
     std::cout << std::endl << "f1-f2 = "<< f1 - f2;
+    std::cout << std::endl << "f1 = "<< f1;
     //subf1f2.display();
 
     // std::cout << std::endl << "mul(f1, f2) = ";
     // (mul(f1, f2)).display();
     std::cout << std::endl << "f1*f2 = "<< f1 * f2;
+    std::cout << std::endl << "f1 = "<< f1;
     //mulf1f2.display();
 
     // std::cout << std::endl << "div(f1, f2) = ";
     // (div(f1, f2)).display();
     std::cout << std::endl << "f1/f2 = "<< f1 / f2;
+    std::cout << std::endl << "f1 = "<< f1;
     //divf1f2.display();
 
     //std::cout << std::endl << "add(1/6, 2/6) = ";
     //(add({1, 6}, {2, 6})).display();
     std::cout << std::endl << "f1+f2 = "<< f1 + f2 ;
+    std::cout << std::endl << "f1 = "<< f1;
     //addf1f2.display();
 
     if (f1==f2){
@@ -60,10 +64,13 @@ int main()
         std::cout << std::endl << f1 << " est superieur ou egale a "<< f2 ;
     }
 
-    std::cout << std::endl << "f1+=f2 : "<< (f1+=f2) ;
-    std::cout << std::endl << "f1-=f2 : "<< (f1-=f2) ;
-    std::cout << std::endl << "f1*=f2 : "<< (f1*=f2) ;
-    std::cout << std::endl << "f1/=f2 : "<< (f1/=f2) ;
+    // std::cout << std::endl << "f1+=f2 : "<< (f1+=f2) ;
+    // std::cout << std::endl << "f1-=f2 : "<< (f1-=f2) ;
+    // std::cout << std::endl << "f1*=f2 : "<< (f1*=f2) ;
+    // std::cout << std::endl << "f1/=f2 : "<< (f1/=f2) ;
+
+    std::cout << std::endl << "f1 = "<< f1;
+
     std::cout << std::endl << f1 << " = " << to_float(f1);
 
 
