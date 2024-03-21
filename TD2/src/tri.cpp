@@ -92,3 +92,28 @@ void merge_sort(std::vector<float> & vec, size_t const left, size_t const right)
     // 3. Fusion des deux sous-parties
     merge_sort_merge(vec, left,  middle, right);
 }
+
+
+//DICHOTOMIE
+int search (std::vector<int> vec, int num){
+    int left {0};
+    int right = vec.size()-1 ;
+
+    while (left <= right ){
+        int middle {(left+right)/2};
+        if (vec[middle] < num){
+            left = middle+1 ;
+            right = right ;
+        }
+        if (vec[middle] > num){
+            left = left ;
+            right = middle-1 ;
+        }
+        if (vec[middle] == num){
+            return (middle);
+        }
+    }
+    
+    return (-1);
+    
+}
