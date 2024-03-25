@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "structure-de-donnee.hpp"
-
+#include "structure-de-donnee-ex1.hpp"
+#include "structure-de-donnee-ex2.hpp"
 
 
 int main () {
@@ -16,7 +16,10 @@ for(std::string str : tab){
     std::cout << std::endl << is_floating(str);
 }
 
-std::cout << std::endl << npi_evaluate(tab);
+//std::cout << std::endl << npi_evaluate(tab);
+
+std::vector<Token> vec = tokenize(tab);
+std::cout << std::endl << npi_evaluate(vec);
 
 
 }
