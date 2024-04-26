@@ -72,7 +72,7 @@ std::unordered_map<std::string, std::vector<float>> robots_fixes_map(std::vector
 int cost_sum (std::vector<float> vec){
     int sum {};
     for (int i{}; i<vec.size();i++){
-        sum+vec[i];
+        sum+=vec[i];
     }
     return (sum);
 }
