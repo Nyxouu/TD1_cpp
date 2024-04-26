@@ -68,12 +68,14 @@ std::ostream& operator<<(std::ostream& os, Fraction const& f) {
 
 //Exercice 3 :
 bool operator==(Fraction const& f1, Fraction const& f2) {
-    if(f1.numerator*f2.denominator == f1.denominator*f2.numerator){
-        return true;
-    }
-    else{
-        return false;
-    };
+    // if(f1.numerator*f2.denominator == f1.denominator*f2.numerator){
+    //     return true;
+    // }
+    // else{
+    //     return false;
+    // };
+    //On peut diretement retourner une opération booléenne :
+    return (f1.numerator*f2.denominator == f1.denominator*f2.numerator);
 }
 
 bool operator!=(Fraction const& f1, Fraction const& f2) {
@@ -91,39 +93,19 @@ bool operator<(Fraction const& f1, Fraction const& f2) {
         f2.denominator*f1.denominator
     };
 
-    if (f1bis.numerator < f2bis.numerator){
-        return true;
-    }
-    else{
-        return false;
-    }
+    return(f1bis.numerator < f2bis.numerator);
 }
 
 bool operator<=(Fraction const& f1, Fraction const& f2) {
-    if (f1<f2 || f1==f2){
-        return true;
-    }
-    else{
-        return false;
-    }
+    return(f1<f2 || f1==f2);
 }
 
 bool operator>(Fraction const& f1, Fraction const& f2) {
-    if (!(f1<=f2)){
-        return true;
-    }
-    else{
-        return false;
-    }
+    return(!(f1<=f2));
 }
 
 bool operator>=(Fraction const& f1, Fraction const& f2) {
-    if (!(f1<=f2) || f1==f2){
-        return true;
-    }
-    else{
-        return false;
-    }
+    return(!(f1<=f2) || f1==f2);
 }
 
 //Exercice 5 :

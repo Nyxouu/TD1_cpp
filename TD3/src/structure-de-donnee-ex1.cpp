@@ -39,10 +39,10 @@
 // float npi_evaluate(std::vector<std::string> const& tokens){
 //     std::stack<float> stack ;
 //     for(std::string str : tokens ){
-//         if (is_floating(str)==true){
+//         if (is_floating(str)){
 //             stack.push(stof(str));  //std::stof sert a convertir les caracteres du tableau en float 
 //         }
-//         if (is_floating(str)==false){
+//         else{
 //             // Je récupère l'élément en haut de la pile
 //             float rightOperand { stack.top() };
 //             // Je l'enlève de la stack (la méthode top ne fait que lire l’élément en dessus de la pile)
