@@ -53,3 +53,13 @@ int Node::height() const{
     return (std::max(h_left,h_right)+1);
 
 }
+
+void Node::delete_childs(){
+    if(left != nullptr ){
+        left->delete_childs();
+    }
+    if(right != nullptr ){
+        right->delete_childs();
+    }
+    delete this;
+}
