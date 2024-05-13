@@ -63,3 +63,37 @@ void Node::delete_childs(){
     }
     delete this;
 }
+
+void Node::display_infixe() const{
+    if (left!=nullptr){
+        left->display_infixe();
+    }
+    std::cout << value << ", " ;
+    if (right!=nullptr){
+        right->display_infixe();
+    }
+}
+
+std::vector<Node const*> Node::prefixe() const{
+    std::vector<Node const*> vec_node {};
+    vec_node.push_back(this);
+    if (left!=nullptr){
+        left->display_infixe();
+    }
+    if (right!=nullptr){
+        right->display_infixe();
+    }
+    return vec_node;
+}
+
+std::vector<Node const*> Node::postfixe() const{
+    std::vector<Node const*> vec_node {};
+    if (left!=nullptr){
+        left->display_infixe();
+    }
+    if (right!=nullptr){
+        right->display_infixe();
+    }
+    vec_node.push_back(this);
+    return vec_node;
+}
