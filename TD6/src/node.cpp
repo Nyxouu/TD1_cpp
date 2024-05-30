@@ -33,11 +33,22 @@ bool Node::is_leaf() const {
 
 void Node::insert(int valeur){
     Node* new_node {create_node (valeur)};
-    if (valeur < this->value){ //this sert a renvoyer la value dde base 
-        left = new_node ;
+
+    if (valeur < this->value){ //this sert a renvoyer la value de base 
+        if (left!=nullptr){
+           left -> insert(valeur); 
+        }
+        else {
+            left = new_node ;
+        }
     }
-    else {
-        right = new_node ;
+    else if (valeur > this->value){
+        if (right!=nullptr){
+           right -> insert(valeur); 
+        }
+        else {
+            right = new_node ;
+        }
     }
 }
 
@@ -78,22 +89,25 @@ std::vector<Node const*> Node::prefixe() const{
     std::vector<Node const*> vec_node {};
     vec_node.push_back(this);
     if (left!=nullptr){
-        left->display_infixe();
+        auto left_nodes {left->prefixe()};
+        vec_node.insert(vec_node.end(), left_nodes.begin(), left_nodes.end());
     }
     if (right!=nullptr){
-        right->display_infixe();
+        auto right_nodes {right->prefixe()};
+        vec_node.insert(vec_node.end(), right_nodes.begin(), right_nodes.end());
     }
     return vec_node;
 }
 
-std::vector<Node const*> Node::postfixe() const{
-    std::vector<Node const*> vec_node {};
-    if (left!=nullptr){
-        left->display_infixe();
+
+Node*& most_left(Node*& node){
+    if (node->left == nullptr){
+        std::cout<< node->value <<std::endl;
+        return node;
     }
-    if (right!=nullptr){
-        right->display_infixe();
+    while (node->left != nullptr){
+        node = node->left ;
     }
-    vec_node.push_back(this);
-    return vec_node;
+    std::cout<< node->value <<std::endl;
+    return node;
 }

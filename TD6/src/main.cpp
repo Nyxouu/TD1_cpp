@@ -12,12 +12,19 @@ int main () {
     Node Node1 {50, nullptr, nullptr};
     Node1.insert(30);
     Node1.insert(80);
+    //Node1.insert(20);
+
 
     Node1.display_infixe();
     std::cout<<std::endl;
-    Node1.prefixe();
+    std::vector<const Node*> tab_nodes {Node1.prefixe()};
+    for (auto &&node : tab_nodes)
+    {
+        std::cout << node->value << ", ";
+    }
     std::cout<<std::endl;
-    Node1.postfixe();
+    most_left(Node1.left);
+
     
 return 0;
 }
