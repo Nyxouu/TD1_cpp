@@ -111,3 +111,27 @@ Node*& most_left(Node*& node){
     std::cout<< node->value <<std::endl;
     return node;
 }
+
+bool remove(Node*& node, int value){
+    if (value == node->value && node->is_leaf()) {
+        // On supprime le nœud courant
+        delete node;
+        // Comme on a une référence sur le pointeur du nœud courant, on le met à jour avec nullptr
+        // Ainsi le parent du nœud courant aura un pointeur vers nullptr
+        node = nullptr;
+        // on retourne true car la suppression a été effectuée
+        return true;
+    }
+    else if (value == node->value && (node->left != nullptr || node->right != nullptr)) {
+        delete node ;
+        if (node->left != nullptr ){
+            node = node->left;
+        }
+        else if (node->right != nullptr ){
+            node = node->right;
+        }
+        node->delete_childs();
+        return true;
+    }
+
+}
